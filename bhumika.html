@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Learning Quest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        .hidden { display: none; }
+    </style>
+</head>
+<body class="bg-indigo-950 min-h-screen pb-20">
+    <div class="container mx-auto px-4">
+        <!-- Home Page -->
+        <div id="home" class="section">
+            <!-- Quote Section -->
+            <div class="bg-purple-400 bg-opacity-20 rounded-lg p-6 mt-8 text-white">
+                <p class="text-xl text-center">"Our virtues and our failures are inseparable, like force and matter. When they separate, man is no more."</p>
+                <p class="text-right mt-2">~Nikola Tesla</p>
+            </div>
+
+            <!-- Carousel -->
+            <div class="mt-8 relative">
+                <div class="carousel flex overflow-hidden">
+                    <!-- Homework Card -->
+                    <div class="w-full p-6 bg-pink-400 bg-opacity-20 rounded-lg" onclick="showSection('homework')">
+                        <h3 class="text-2xl text-white mb-2">Homework</h3>
+                        <p class="text-white opacity-80">Attention students! Don't forget to check for your latest assignments from your teacher.</p>
+                    </div>
+                    <!-- To-Do List Card -->
+                    <div class="w-full p-6 bg-green-400 bg-opacity-20 rounded-lg" onclick="showSection('todo')">
+                        <h3 class="text-2xl text-white mb-2">To-Do List</h3>
+                        <p class="text-white opacity-80">Keep track of your tasks and manage your time effectively.</p>
+                    </div>
+                </div>
+                <!-- Carousel Navigation -->
+                <div class="flex justify-center gap-2 mt-4">
+                    <button class="h-2 w-2 rounded-full bg-white"></button>
+                    <button class="h-2 w-2 rounded-full bg-white opacity-50"></button>
+                </div>
+            </div>
+
+            <!-- Knowledge Quests -->
+            <div class="mt-8">
+                <h2 class="text-2xl text-white mb-4">Browse Knowledge Quests</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <!-- Maths -->
+                    <a href="#" onclick="showSection('maths')" class="p-6 rounded-lg bg-emerald-400 bg-opacity-20 transform hover:scale-105 transition-transform">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl text-white">Maths</h3>
+                            <i class="bi bi-calculator text-white text-2xl"></i>
+                        </div>
+                        <p class="text-white opacity-80">0/20 Chapters</p>
+                        <div class="mt-2 bg-white bg-opacity-20 rounded-full h-2">
+                            <div class="w-0 h-full bg-white rounded-full"></div>
+                        </div>
+                        <p class="text-white mt-2">Score - 0</p>
+                    </a>
+
+                    <!-- Physics -->
+                    <a href="#" onclick="showSection('physics')" class="p-6 rounded-lg bg-blue-400 bg-opacity-20 transform hover:scale-105 transition-transform">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl text-white">Physics</h3>
+                            <i class="bi bi-atom text-white text-2xl"></i>
+                        </div>
+                        <p class="text-white opacity-80">0/20 Chapters</p>
+                        <div class="mt-2 bg-white bg-opacity-20 rounded-full h-2">
+                            <div class="w-0 h-full bg-white rounded-full"></div>
+                        </div>
+                        <p class="text-white mt-2">Score - 0</p>
+                    </a>
+
+                    <!-- Biology -->
+                    <a href="#" onclick="showSection('biology')" class="p-6 rounded-lg bg-orange-400 bg-opacity-20 transform hover:scale-105 transition-transform">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl text-white">Biology</h3>
+                            <i class="bi bi-virus text-white text-2xl"></i>
+                        </div>
+                        <p class="text-white opacity-80">0/31 Chapters</p>
+                        <div class="mt-2 bg-white bg-opacity-20 rounded-full h-2">
+                            <div class="w-0 h-full bg-white rounded-full"></div>
+                        </div>
+                        <p class="text-white mt-2">Score - 0</p>
+                    </a>
+
+                    <!-- Chemistry -->
+                    <a href="#" onclick="showSection('chemistry')" class="p-6 rounded-lg bg-yellow-400 bg-opacity-20 transform hover:scale-105 transition-transform">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl text-white">Chemistry</h3>
+                            <i class="bi bi-flask text-white text-2xl"></i>
+                        </div>
+                        <p class="text-white opacity-80">0/24 Chapters</p>
+                        <div class="mt-2 bg-white bg-opacity-20 rounded-full h-2">
+                            <div class="w-0 h-full bg-white rounded-full"></div>
+                        </div>
+                        <p class="text-white mt-2">Score - 0</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Accessible Learning Materials -->
+            <div class="mt-8">
+                <h2 class="text-2xl text-white mb-4">Accessible Learning Materials</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <a href="https://search.app/wDP2eqMp7baWTeoG9" target="_blank" class="p-6 rounded-lg bg-indigo-400 bg-opacity-20 transform hover:scale-105 transition-transform">
+                        <h3 class="text-xl text-white">E-Books</h3>
+                        <p class="text-white opacity-80">Download e-books in accessible formats.</p>
+                    </a>
+                    <a href="https://search.app/LDbGpShoMMAF2idF6" target="_blank" class="p-6 rounded-lg bg-indigo-400 bg-opacity-20 transform hover:scale-105 transition-transform">
+                        <h3 class="text-xl text-white">Audio Lessons</h3>
+                        <p class="text-white opacity-80">Listen to audio lessons for better understanding.</p>
+                    </a>
+                    <a href="https://youtu.be/lYhAAMDQl-Q?feature=shared" target="_blank" class="p-6 rounded-lg bg-indigo-400 bg-opacity-20 transform hover:scale-105 transition-transform">
+                        <h3 class="text-xl text-white">Videos</h3>
+                        <p class="text-white opacity-80">Watch videos with subtitles and sign language.</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Navigation Bar -->
+            <nav class="fixed bottom-0 left-0 right-0 bg-indigo-900 p-4">
+                <div class="flex justify-around max-w-md mx-auto">
+                    <button class="flex flex-col items-center text-white">
+                        <i class="bi bi-book text-xl"></i>
+                        <span class="text-sm mt-1">Learn</span>
+                    </button>
+                    <button class="flex flex-col items-center text-white opacity-50" onclick="showSection('dashboard')">
+                        <i class="bi bi-grid text-xl"></i>
+                        <span class="text-sm mt-1">Dashboard</span>
+                    </button>
+                    <button class="flex flex-col items-center text-white opacity-50" onclick="showSection('profile')">
+                        <i class="bi bi-person text-xl"></i>
+                        <span class="text-sm mt-1">Profile</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Homework Page -->
+        <div id="homework" class="section hidden">
+            <button onclick="showSection('home')" class="text-white mt-8 flex items-center">
+                <i class="bi bi-arrow-left mr-2"></i> Back to Home
+            </button>
+            <h1 class="text-3xl text-white font-bold mt-8">Homework</h1>
+            <div class="mt-6">
+                <textarea class="w-full p-4 rounded-lg bg-indigo-900 text-white focus:outline-none focus:ring-2 focus:ring-purple-400" rows="10" placeholder="Type your homework here..."></textarea>
+            </div>
+        </div>
+
+        <!-- To-Do List Page -->
+        <div id="todo" class="section hidden">
+            <button onclick="showSection('home')" class="text-white mt-8 flex items-center">
+                <i class="bi bi-arrow-left mr-2"></i> Back to Home
+            </button>
+            <h1 class="text-3xl text-white font-bold mt-8">To-Do List</h1>
+            <div class="mt-6">
+                <textarea class="w-full p-4 rounded-lg bg-indigo-900 text-white focus:outline-none focus:ring-2 focus:ring-purple-400" rows="10" placeholder="Type your tasks here..."></textarea>
+            </div>
+        </div>
+
+        <!-- Dashboard Page -->
+        <div id="dashboard" class="section hidden">
+            <button onclick="showSection('home')" class="text-white mt-8 flex items-center">
+                <i class="bi bi-arrow-left mr-2"></i> Back to Home
+            </button>
+            <h1 class="text-3xl text-white font-bold mt-8">Dashboard</h1>
+            <div class="mt-6">
+                <h2 class="text-2xl text-white mb-4">Homework</h2>
+                <textarea class="w-full p-4 rounded-lg bg-indigo-900 text-white focus:outline-none focus:ring-2 focus:ring-purple-400" rows="5" placeholder="Type your homework here..."></textarea>
+            </div>
+            <div class="mt-6">
+                <h2 class="text-2xl text-white mb-4">To-Do List</h2>
+                <textarea class="w-full p-4 rounded-lg bg-indigo-900 text-white focus:outline-none focus:ring-2 focus:ring-purple-400" rows="5" placeholder="Type your tasks here..."></textarea>
+            </div>
+            <div class="mt-6">
+                <h2 class="text-2xl text-white mb-4">Start Your Journey to Success</h2>
+                <a href="https://bhumikaai47ipdcproject.tiiny.site" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded-full inline-block">
+                    Start Now
+                </a>
+            </div>
+        </div>
+
+        <!-- Journey to Success Page -->
+        <div id="journey" class="section hidden">
+            <button onclick="showSection('home')" class="text-white mt-8 flex items-center">
+                <i class="bi bi-arrow-left mr-2"></i> Back to Home
+            </button>
+            <iframe src="https://bhumikaai47ipdcproject.tiiny.site" style="width: 100%; height: 100vh; border: none;"></iframe>
+        </div>
+
+        <!-- Maths Page -->
+        <div id="maths" class="section hidden">
+            <button onclick="showSection('home')" class="text-white mt-8 flex items-center">
+                <i class="bi bi-arrow-left mr-2"></i> Back to Home
+            </button>
+            <h1 class="text-3xl text-white font-bold mt-8">Mathematics</h1>
+            <div class="mt-6">
+                <div class="relative">
+                    <input type="text" placeholder="Search For Topics" class="w-full p-4 rounded-full bg-indigo-900 text-white focus:outline-none focus:ring-2 focus:ring-purple-400">
+                    <button class="absolute right-4 top-1/2 transform -translate-y-1/2">
+                        <i class="bi bi-search text-white text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="mt-8">
+                <h2 class="text-2xl text-white mb-4">Chapters</h2>
+                <div class="grid gap-4">
+                    <div class="bg-purple-400 bg-opacity-20 rounded-lg p-6">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl text-white">Algebra</h3>
+                            <span class="text-white opacity-80">0/5 Topics</span>
+                        </div>
+                        <div class="mt-4 space-y-3">
+                            <a href="https://youtu.be/NybHckSEQBI" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                                <div class="flex justify-between items-center">
+                                    <span>Introduction to Algebra</span>
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                            <a href="https://youtu.be/XZJdyPkCxuE" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                                <div class="flex justify-between items-center">
+                                    <span>Linear Equations</span>
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                            <a href="https://youtu.be/pJzmiywagfY" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                                <div class="flex justify-between items-center">
+                                    <span>Quadratic Equations</span>
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-blue-400 bg-opacity-20 rounded-lg p-6">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl text-white">Geometry</h3>
+                            <span class="text-white opacity-80">0/4 Topics</span>
+                        </div>
+                        <div class="mt-4 space-y-3">
+                            <a href="https://youtu.be/z7IpwvWnA_c" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                                <div class="flex justify-between items-center">
+                                    <span>Basic Shapes</span>
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                            <a href="https://youtu.be/P2w0hK__FzE" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                                <div class="flex justify-between items-center">
+                                    <span>Circle Theorems</span>
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-green-400 bg-opacity-20 rounded-lg p-6">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl text-white">Trigonometry</h3>
+                            <span class="text-white opacity-80">0/3 Topics</span>
+                        </div>
+                        <div class="mt-4 space-y-3">
+                            <a href="https://youtu.be/F21S9Wpi0y8" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                                <div class="flex justify-between items-center">
+                                    <span>Basics of Trigonometry</span>
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                            <a href="https://youtu.be/zfk_m-kQzu8" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                                <div class="flex justify-between items-center">
+                                    <span>Trigonometric Ratios</span>
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Physics Page -->
+        <div id="physics" class="section hidden">
+            <button onclick="showSection('home')" class="text-white mt-8 flex items-center">
+                <i class="bi bi-arrow-left mr-2"></i> Back to Home
+            </button>
+            <h1 class="text-3xl text-white font-bold mt-8">Physics</h1>
+            <div class="mt-6">
+                <div class="relative">
+                    <input type="text" placeholder="Search For Topics" class="w-full p-4 rounded-full bg-indigo-900 text-white focus:outline-none focus:ring-2 focus:ring-purple-400">
+                    <button class="absolute right-4 top-1/2 transform -translate-y-1/2">
+                        <i class="bi bi-search text-white text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="mt-8">
+                <h2 class="text-2xl text-white mb-4">Chapters</h2>
+                <div class="grid gap-4">
+                    <div class="bg-purple-400 bg-opacity-20 rounded-lg p-6">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl text-white">Mechanics</h3>
+                            <span class="text-white opacity-80">0/3 Topics</span>
+                        </div>
+                        <div class="mt-4 space-y-3">
+                            <a href="https://youtu.be/b1t41Q3xRM8" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                                <div class="flex justify-between items-center">
+                                    <span>Introduction to Motion</span>
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                            <a href="https://youtu.be/fo_pmp5rtzo" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                                <div class="flex justify-between items-center">
+                                    <span>Newton's Laws</span>
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                            <a href="https://youtu.be/AuRe1E8TUiU" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                                <div class="flex justify-between items-center">
+                                    <span>Work and Energy</span>
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-blue-400 bg-opacity-20 rounded-lg p-6">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl text-white">Waves and Sound</h3>
+                            <span class="text-white opacity-80">0/3 Topics</span>
+                        </div>
+                        <div class="mt-4 space-y-3">
+                            <a href="https://youtu.be/w2s_SwKhkKI" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                                <div class="flex justify-between items-center">
+                                    <span>Wave Properties</span>
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                            <a href="https://youtu.be/qV4lR9EWGlY" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                                <div class="flex justify-between items-center">
+                                    <span>Sound Waves</span>
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-green-400 bg-opacity-20 rounded-lg p-6">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl text-white">Electricity and Magnetism</h3>
+                            <span class="text-white opacity-80">0/3 Topics</span>
+                        </div>
+                        <div class="mt-4 space-y-3">
+                            <a href="https://youtu.be/ru032Mfsfig" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                                <div class="flex justify-between items-center">
+                                    <span>Electric Charges and Fields</span>
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                            <a href="https://youtu.be/s94suB5uLWw" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                                <div class="flex justify-between items-center">
+                                    <span>Magnetic Fields</span>
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chemistry Page -->
+        <div id="chemistry" class="section hidden">
+            <button onclick="showSection('home')" class="text-white mt-8 flex items-center">
+                <i class="bi bi-arrow-left mr-2"></i> Back to Home
+            </button>
+            <h1 class="text-3xl text-white font-bold mt-8">Chemistry</h1>
+            <div class="mt-6">
+                <div class="relative">
+                    <input type="text" placeholder="Search For Topics" class="w-full p-4 rounded-full bg-indigo-900 text-white focus:outline-none focus:ring-2 focus:ring-purple-400">
+                    <button class="absolute right-4 top-1/2 transform -translate-y-1/2">
+                        <i class="bi bi-search text-white text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="mt-8">
+                <h2 class="text-2xl text-white mb-4">Chapters</h2>
+                <div class="grid gap-4">
+                    <div class="bg-purple-400 bg-opacity-20 rounded-lg p-6">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl text-white">Physical Chemistry</h3>
+                            <span class="text-white opacity-80">0/5 Topics</span>
+                        </div>
+                        <div class="mt-4 space-y-3">
+                            <a href="https://youtu.be/f5kK5p3v5Yg" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                                <div class="flex justify-between items-center">
+                                    <span>States of Matter</span>
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                            <a href="https://youtu.be/iZ6Jx4kQh8s" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                                <div class="flex justify-between items-center">
+                                    <span>Chemical Kinetics</span>
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                            <a href="https://youtu.be/HqepqpgZgNk" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                                <div class="flex justify-between items-center">
+                                    <span>Thermodynamics</span>
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-blue-400 bg-opacity-20 rounded-lg p-6">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl text-white">Organic Chemistry</h3>
+                            <span class="text-white opacity-80">0/4 Topics</span>
+                        </div>
+                        <div class="mt-4 space-y-3">
+                            <a href="https://youtu.be/LQq1IwznQ2o" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                                <div class="flex justify-between items-center">
+                                    <span>Basic Organic Chemistry</span>
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                            <a href="https://youtu.be/bpnHW1KQ7OE" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                                <div class="flex justify-between items-center">
+                                    <span>Hydrocarbons</span>
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-green-400 bg-opacity-20 rounded-lg p-6">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl text-white">Inorganic Chemistry</h3>
+                            <span class="text-white opacity-80">0/3 Topics</span>
+                        </div>
+                        <div class="mt-4 space-y-3">
+                            <a href="https://youtu.be/YeK_vN1rXgk" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                                <div class="flex justify-between items-center">
+                                    <span>Periodic Table</span>
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                            <a href="https://youtu.be/yl6VIpwJpxs" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                                <div class="flex justify-between items-center">
+                                    <span>Chemical Bonding</span>
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Biology Page -->
+        <div id="biology" class="section hidden">
+            <button onclick="showSection('home')" class="text-white mt-8 flex items-center">
+                <i class="bi bi-arrow-left mr-2"></i> Back to Home
+            </button>
+            <h1 class="text-3xl text-white font-bold mt-8">Biology</h1>
+            <div class="mt-6">
+                <div class="relative">
+                    <input type="text" placeholder="Search For Topics" class="w-full p-4 rounded-full bg-indigo-900 text-white focus:outline-none focus:ring-2 focus:ring-purple-400">
+                    <button class="absolute right-4 top-1/2 transform -translate-y-1/2">
+                        <i class="bi bi-search text-white text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="mt-8">
+                <h2 class="text-2xl text-white mb-4">Chapters</h2>
+                <div class="grid gap-4">
+                    <div class="bg-purple-400 bg-opacity-20 rounded-lg p-6">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl text-white">Cell Biology</h3>
+                            <span class="text-white opacity-80">0/5 Topics</span>
+                        </div>
+                        <div class="mt-4 space-y-3">
+                            <a href="https://youtu.be/f5kK5p3v5Yg" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                                <div class="flex justify-between items-center">
+                                    <span>Cell Structure</span>
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                            <a href="https://youtu.be/iZ6Jx4kQh8s" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                                <div class="flex justify-between items-center">
+                                    <span>Cell Division</span>
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                            <a href="https://youtu.be/HqepqpgZgNk" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                                <div class="flex justify-between items-center">
+                                    <span>Genetics</span>
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-blue-400 bg-opacity-20 rounded-lg p-6">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl text-white">Human Biology</h3>
+                            <span class="text-white opacity-80">0/4 Topics</span>
+                        </div>
+                        <div class="mt-4 space-y-3">
+                            <a href="https://youtu.be/LQq1IwznQ2o" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                                <div class="flex justify-between items-center">
+                                    <span>Human Anatomy</span>
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                            <a href="https://youtu.be/bpnHW1KQ7OE" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                                <div class="flex justify-between items-center">
+                                    <span>Physiology</span>
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-green-400 bg-opacity-20 rounded-lg p-6">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl text-white">Ecology</h3>
+                            <span class="text-white opacity-80">0/3 Topics</span>
+                        </div>
+                        <div class="mt-4 space-y-3">
+                            <a href="https://youtu.be/YeK_vN1rXgk" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                                <div class="flex justify-between items-center">
+                                    <span>Ecological Systems</span>
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                            <a href="https://youtu.be/yl6VIpwJpxs" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                                <div class="flex justify-between items-center">
+                                    <span>Biodiversity</span>
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile Page -->
+        <div id="profile" class="section hidden">
+            <button onclick="showSection('home')" class="text-white mt-8 flex items-center">
+                <i class="bi bi-arrow-left mr-2"></i> Back to Home
+            </button>
+            <h1 class="text-2xl mb-2 text-white">Profile</h1>
+            <p class="text-gray-400 mb-4">Student Information</p>
+            <div class="bg-indigo-900 rounded-lg p-4 space-y-4">
+                <div class="flex justify-between items-center border-b border-indigo-800 pb-4">
+                    <span>Name</span>
+                    <div class="flex items-center">
+                        <input type="text" id="name" placeholder="Enter your name" class="bg-transparent text-right mr-2">
+                        <i class="bi bi-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center border-b border-indigo-800 pb-4">
+                    <span>Grade</span>
+                    <div class="flex items-center">
+                        <select id="grade" class="bg-transparent text-right mr-2">
+                            <option value="">Select grade</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <i class="bi bi-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center pb-4">
+                    <span>Board</span>
+                    <div class="flex items-center">
+                        <select id="board" class="bg-transparent text-right mr-2">
+                            <option value="">Select board</option>
+                            <option value="SSC">SSC</option>
+                            <option value="CBSE">CBSE</option>
+                            <option value="ICSE">ICSE</option>
+                        </select>
+                        <i class="bi bi-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="text-2xl mb-2 text-white">Account Settings</h2>
+            <p class="text-gray-400 mb-4">Parental Information</p>
+            <div class="bg-indigo-900 rounded-lg p-4 space-y-4">
+                <div class="flex justify-between items-center border-b border-indigo-800 pb-4">
+                    <span>Email</span>
+                    <div class="flex items-center">
+                        <input type="email" id="email" placeholder="Enter email" class="bg-transparent text-right mr-2">
+                        <i class="bi bi-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center pb-4">
+                    <span>Phone</span>
+                    <div class="flex items-center">
+                        <input type="tel" id="phone" placeholder="Enter phone" class="bg-transparent text-right mr-2">
+                        <i class="bi bi-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="text-2xl mb-2 text-white">General</h2>
+            <p class="text-gray-400 mb-4">App usage related controls</p>
+            <div class="bg-indigo-900 rounded-lg p-4">
+                <div class="flex justify-between items-center">
+                    <span>Language</span>
+                    <div class="flex items-center">
+                        <select id="language" class="bg-transparent text-right mr-2">
+                            <option value="english">English</option>
+                            <option value="hindi">Hindi</option>
+                        </select>
+                        <i class="bi bi-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 flex justify-center">
+                <button onclick="saveProfile()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded-full">
+                    Save Profile
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.add('hidden');
+            });
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+
+        function saveProfile() {
+            const profile = {
+                name: document.getElementById('name').value,
+                grade: document.getElementById('grade').value,
+                board: document.getElementById('board').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                language: document.getElementById('language').value
+            };
+
+            // Generate a unique userId if not exists
+            let userId = localStorage.getItem('userId');
+            if (!userId) {
+                userId = 'user_' + Math.random().toString(36).substr(2, 9);
+                localStorage.setItem('userId', userId);
+            }
+
+            // Save to database
+            fetch('https://r0c8kgwocscg8gsokogwwsw4.zetaverse.one/db', {
+                method: 'POST',
+                headers: {
+                    'Authorization': 'Bearer pLmpJtN2WPMOCh0AIstiX4UrWR13',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    userId: userId,
+                    appSlug: 'student-profile',
+                    action: 'create',
+                    table: 'profiles',
+                    data: profile
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (!data.error) {
+                    alert('Profile saved successfully!');
+                } else {
+                    alert('Error saving profile: ' + data.error);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error saving profile. Please try again.');
+            });
+        }
+
+        function toggleTextToSpeech() {
+            alert('Text-to-Speech feature is not yet implemented.');
+        }
+
+        // Load existing profile data when page loads
+        window.onload = function() {
+            const userId = localStorage.getItem('userId');
+            if (userId) {
+                fetch('https://r0c8kgwocscg8gsokogwwsw4.zetaverse.one/db', {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': 'Bearer pLmpJtN2WPMOCh0AIstiX4UrWR13',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        userId: userId,
+                        appSlug: 'student-profile',
+                        action: 'read',
+                        table: 'profiles'
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (!data.error && data.data.length > 0) {
+                        const profile = data.data[0].data;
+                        document.getElementById('name').value = profile.name || '';
+                        document.getElementById('grade').value = profile.grade || '';
+                        document.getElementById('board').value = profile.board || '';
+                        document.getElementById('email').value = profile.email || '';
+                        document.getElementById('phone').value = profile.phone || '';
+                        document.getElementById('language').value = profile.language || 'english';
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+            }
+        };
+    </script>
+</body>
+</html>
