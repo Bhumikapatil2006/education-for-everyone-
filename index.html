@@ -24,12 +24,12 @@
             <div class="mt-8 relative">
                 <div class="carousel flex overflow-hidden">
                     <!-- Homework Card -->
-                    <div class="w-full p-6 bg-pink-400 bg-opacity-20 rounded-lg" onclick="showSection('homework')">
+                    <div class="w-full p-6 bg-pink-400 bg-opacity-20 rounded-lg" onclick="showSection('homework')" onmouseover="speakText('Homework')">
                         <h3 class="text-2xl text-white mb-2">Homework</h3>
                         <p class="text-white opacity-80">Attention students! Don't forget to check for your latest assignments from your teacher.</p>
                     </div>
                     <!-- To-Do List Card -->
-                    <div class="w-full p-6 bg-green-400 bg-opacity-20 rounded-lg" onclick="showSection('todo')">
+                    <div class="w-full p-6 bg-green-400 bg-opacity-20 rounded-lg" onclick="showSection('todo')" onmouseover="speakText('To-Do List')">
                         <h3 class="text-2xl text-white mb-2">To-Do List</h3>
                         <p class="text-white opacity-80">Keep track of your tasks and manage your time effectively.</p>
                     </div>
@@ -46,7 +46,7 @@
                 <h2 class="text-2xl text-white mb-4">Browse Knowledge Quests</h2>
                 <div class="grid grid-cols-2 gap-4">
                     <!-- Maths -->
-                    <a href="#" onclick="showSection('maths')" class="p-6 rounded-lg bg-emerald-400 bg-opacity-20 transform hover:scale-105 transition-transform">
+                    <a href="#" onclick="showSection('maths')" class="p-6 rounded-lg bg-emerald-400 bg-opacity-20 transform hover:scale-105 transition-transform" onmouseover="speakText('Maths')">
                         <div class="flex justify-between items-center mb-2">
                             <h3 class="text-xl text-white">Maths</h3>
                             <i class="bi bi-calculator text-white text-2xl"></i>
@@ -59,7 +59,7 @@
                     </a>
 
                     <!-- Physics -->
-                    <a href="#" onclick="showSection('physics')" class="p-6 rounded-lg bg-blue-400 bg-opacity-20 transform hover:scale-105 transition-transform">
+                    <a href="#" onclick="showSection('physics')" class="p-6 rounded-lg bg-blue-400 bg-opacity-20 transform hover:scale-105 transition-transform" onmouseover="speakText('Physics')">
                         <div class="flex justify-between items-center mb-2">
                             <h3 class="text-xl text-white">Physics</h3>
                             <i class="bi bi-atom text-white text-2xl"></i>
@@ -72,7 +72,7 @@
                     </a>
 
                     <!-- Biology -->
-                    <a href="#" onclick="showSection('biology')" class="p-6 rounded-lg bg-orange-400 bg-opacity-20 transform hover:scale-105 transition-transform">
+                    <a href="#" onclick="showSection('biology')" class="p-6 rounded-lg bg-orange-400 bg-opacity-20 transform hover:scale-105 transition-transform" onmouseover="speakText('Biology')">
                         <div class="flex justify-between items-center mb-2">
                             <h3 class="text-xl text-white">Biology</h3>
                             <i class="bi bi-virus text-white text-2xl"></i>
@@ -85,7 +85,7 @@
                     </a>
 
                     <!-- Chemistry -->
-                    <a href="#" onclick="showSection('chemistry')" class="p-6 rounded-lg bg-yellow-400 bg-opacity-20 transform hover:scale-105 transition-transform">
+                    <a href="#" onclick="showSection('chemistry')" class="p-6 rounded-lg bg-yellow-400 bg-opacity-20 transform hover:scale-105 transition-transform" onmouseover="speakText('Chemistry')">
                         <div class="flex justify-between items-center mb-2">
                             <h3 class="text-xl text-white">Chemistry</h3>
                             <i class="bi bi-flask text-white text-2xl"></i>
@@ -103,15 +103,15 @@
             <div class="mt-8">
                 <h2 class="text-2xl text-white mb-4">Accessible Learning Materials</h2>
                 <div class="grid grid-cols-2 gap-4">
-                    <a href="https://search.app/wDP2eqMp7baWTeoG9" target="_blank" class="p-6 rounded-lg bg-indigo-400 bg-opacity-20 transform hover:scale-105 transition-transform">
+                    <a href="https://search.app/wDP2eqMp7baWTeoG9" target="_blank" class="p-6 rounded-lg bg-indigo-400 bg-opacity-20 transform hover:scale-105 transition-transform" onmouseover="speakText('E-Books')">
                         <h3 class="text-xl text-white">E-Books</h3>
                         <p class="text-white opacity-80">Download e-books in accessible formats.</p>
                     </a>
-                    <a href="https://search.app/LDbGpShoMMAF2idF6" target="_blank" class="p-6 rounded-lg bg-indigo-400 bg-opacity-20 transform hover:scale-105 transition-transform">
+                    <a href="https://search.app/LDbGpShoMMAF2idF6" target="_blank" class="p-6 rounded-lg bg-indigo-400 bg-opacity-20 transform hover:scale-105 transition-transform" onmouseover="speakText('Audio Lessons')">
                         <h3 class="text-xl text-white">Audio Lessons</h3>
                         <p class="text-white opacity-80">Listen to audio lessons for better understanding.</p>
                     </a>
-                    <a href="https://youtu.be/lYhAAMDQl-Q?feature=shared" target="_blank" class="p-6 rounded-lg bg-indigo-400 bg-opacity-20 transform hover:scale-105 transition-transform">
+                    <a href="https://youtu.be/lYhAAMDQl-Q?feature=shared" target="_blank" class="p-6 rounded-lg bg-indigo-400 bg-opacity-20 transform hover:scale-105 transition-transform" onmouseover="speakText('Videos')">
                         <h3 class="text-xl text-white">Videos</h3>
                         <p class="text-white opacity-80">Watch videos with subtitles and sign language.</p>
                     </a>
@@ -121,15 +121,15 @@
             <!-- Navigation Bar -->
             <nav class="fixed bottom-0 left-0 right-0 bg-indigo-900 p-4">
                 <div class="flex justify-around max-w-md mx-auto">
-                    <button class="flex flex-col items-center text-white">
+                    <button class="flex flex-col items-center text-white" onmouseover="speakText('Learn')">
                         <i class="bi bi-book text-xl"></i>
                         <span class="text-sm mt-1">Learn</span>
                     </button>
-                    <button class="flex flex-col items-center text-white opacity-50" onclick="showSection('dashboard')">
+                    <button class="flex flex-col items-center text-white opacity-50" onclick="showSection('dashboard')" onmouseover="speakText('Dashboard')">
                         <i class="bi bi-grid text-xl"></i>
                         <span class="text-sm mt-1">Dashboard</span>
                     </button>
-                    <button class="flex flex-col items-center text-white opacity-50" onclick="showSection('profile')">
+                    <button class="flex flex-col items-center text-white opacity-50" onclick="showSection('profile')" onmouseover="speakText('Profile')">
                         <i class="bi bi-person text-xl"></i>
                         <span class="text-sm mt-1">Profile</span>
                     </button>
@@ -139,7 +139,7 @@
 
         <!-- Homework Page -->
         <div id="homework" class="section hidden">
-            <button onclick="showSection('home')" class="text-white mt-8 flex items-center">
+            <button onclick="showSection('home')" class="text-white mt-8 flex items-center" onmouseover="speakText('Back to Home')">
                 <i class="bi bi-arrow-left mr-2"></i> Back to Home
             </button>
             <h1 class="text-3xl text-white font-bold mt-8">Homework</h1>
@@ -150,7 +150,7 @@
 
         <!-- To-Do List Page -->
         <div id="todo" class="section hidden">
-            <button onclick="showSection('home')" class="text-white mt-8 flex items-center">
+            <button onclick="showSection('home')" class="text-white mt-8 flex items-center" onmouseover="speakText('Back to Home')">
                 <i class="bi bi-arrow-left mr-2"></i> Back to Home
             </button>
             <h1 class="text-3xl text-white font-bold mt-8">To-Do List</h1>
@@ -161,7 +161,7 @@
 
         <!-- Dashboard Page -->
         <div id="dashboard" class="section hidden">
-            <button onclick="showSection('home')" class="text-white mt-8 flex items-center">
+            <button onclick="showSection('home')" class="text-white mt-8 flex items-center" onmouseover="speakText('Back to Home')">
                 <i class="bi bi-arrow-left mr-2"></i> Back to Home
             </button>
             <h1 class="text-3xl text-white font-bold mt-8">Dashboard</h1>
@@ -174,16 +174,34 @@
                 <textarea class="w-full p-4 rounded-lg bg-indigo-900 text-white focus:outline-none focus:ring-2 focus:ring-purple-400" rows="5" placeholder="Type your tasks here..."></textarea>
             </div>
             <div class="mt-6">
-                <h2 class="text-2xl text-white mb-4">Start Your Journey to Success</h2>
-                <a href="https://bhumikaai47ipdcproject.tiiny.site" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded-full inline-block">
-                    Start Now
-                </a>
+                <h2 class="text-2xl text-white mb-4">Therapy</h2>
+                <button onclick="showSection('therapy')" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded-full" onmouseover="speakText('Therapy')">
+                    Learn More
+                </button>
             </div>
+            <div class="mt-6">
+                <h2 class="text-2xl text-white mb-4">Chat Box</h2>
+                <div class="bg-indigo-900 rounded-lg p-4">
+                    <div id="chat-box" class="h-40 overflow-y-auto mb-4 bg-indigo-800 p-2 rounded-lg"></div>
+                    <input type="text" id="chat-input" class="w-full p-2 rounded-lg bg-indigo-700 text-white" placeholder="Type your message...">
+                    <button onclick="sendMessage()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-2" onmouseover="speakText('Send Message')">
+                        Send
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Therapy Page -->
+        <div id="therapy" class="section hidden">
+            <button onclick="showSection('dashboard')" class="text-white mt-8 flex items-center" onmouseover="speakText('Back to Dashboard')">
+                <i class="bi bi-arrow-left mr-2"></i> Back to Dashboard
+            </button>
+            <iframe src="https://brainwave.watch/types-of-therapy-for-special-needs-children/" style="width: 100%; height: 100vh; border: none;"></iframe>
         </div>
 
         <!-- Journey to Success Page -->
         <div id="journey" class="section hidden">
-            <button onclick="showSection('home')" class="text-white mt-8 flex items-center">
+            <button onclick="showSection('home')" class="text-white mt-8 flex items-center" onmouseover="speakText('Back to Home')">
                 <i class="bi bi-arrow-left mr-2"></i> Back to Home
             </button>
             <iframe src="https://bhumikaai47ipdcproject.tiiny.site" style="width: 100%; height: 100vh; border: none;"></iframe>
@@ -191,14 +209,14 @@
 
         <!-- Maths Page -->
         <div id="maths" class="section hidden">
-            <button onclick="showSection('home')" class="text-white mt-8 flex items-center">
+            <button onclick="showSection('home')" class="text-white mt-8 flex items-center" onmouseover="speakText('Back to Home')">
                 <i class="bi bi-arrow-left mr-2"></i> Back to Home
             </button>
             <h1 class="text-3xl text-white font-bold mt-8">Mathematics</h1>
             <div class="mt-6">
                 <div class="relative">
                     <input type="text" placeholder="Search For Topics" class="w-full p-4 rounded-full bg-indigo-900 text-white focus:outline-none focus:ring-2 focus:ring-purple-400">
-                    <button class="absolute right-4 top-1/2 transform -translate-y-1/2">
+                    <button class="absolute right-4 top-1/2 transform -translate-y-1/2" onmouseover="speakText('Search')">
                         <i class="bi bi-search text-white text-xl"></i>
                     </button>
                 </div>
@@ -212,19 +230,19 @@
                             <span class="text-white opacity-80">0/5 Topics</span>
                         </div>
                         <div class="mt-4 space-y-3">
-                            <a href="https://youtu.be/NybHckSEQBI" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                            <a href="https://youtu.be/NybHckSEQBI" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all" onmouseover="speakText('Introduction to Algebra')">
                                 <div class="flex justify-between items-center">
                                     <span>Introduction to Algebra</span>
                                     <i class="bi bi-play-circle"></i>
                                 </div>
                             </a>
-                            <a href="https://youtu.be/XZJdyPkCxuE" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                            <a href="https://youtu.be/XZJdyPkCxuE" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all" onmouseover="speakText('Linear Equations')">
                                 <div class="flex justify-between items-center">
                                     <span>Linear Equations</span>
                                     <i class="bi bi-play-circle"></i>
                                 </div>
                             </a>
-                            <a href="https://youtu.be/pJzmiywagfY" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                            <a href="https://youtu.be/pJzmiywagfY" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all" onmouseover="speakText('Quadratic Equations')">
                                 <div class="flex justify-between items-center">
                                     <span>Quadratic Equations</span>
                                     <i class="bi bi-play-circle"></i>
@@ -238,13 +256,13 @@
                             <span class="text-white opacity-80">0/4 Topics</span>
                         </div>
                         <div class="mt-4 space-y-3">
-                            <a href="https://youtu.be/z7IpwvWnA_c" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                            <a href="https://youtu.be/z7IpwvWnA_c" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all" onmouseover="speakText('Basic Shapes')">
                                 <div class="flex justify-between items-center">
                                     <span>Basic Shapes</span>
                                     <i class="bi bi-play-circle"></i>
                                 </div>
                             </a>
-                            <a href="https://youtu.be/P2w0hK__FzE" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                            <a href="https://youtu.be/P2w0hK__FzE" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all" onmouseover="speakText('Circle Theorems')">
                                 <div class="flex justify-between items-center">
                                     <span>Circle Theorems</span>
                                     <i class="bi bi-play-circle"></i>
@@ -258,13 +276,13 @@
                             <span class="text-white opacity-80">0/3 Topics</span>
                         </div>
                         <div class="mt-4 space-y-3">
-                            <a href="https://youtu.be/F21S9Wpi0y8" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                            <a href="https://youtu.be/F21S9Wpi0y8" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all" onmouseover="speakText('Basics of Trigonometry')">
                                 <div class="flex justify-between items-center">
                                     <span>Basics of Trigonometry</span>
                                     <i class="bi bi-play-circle"></i>
                                 </div>
                             </a>
-                            <a href="https://youtu.be/zfk_m-kQzu8" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                            <a href="https://youtu.be/zfk_m-kQzu8" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all" onmouseover="speakText('Trigonometric Ratios')">
                                 <div class="flex justify-between items-center">
                                     <span>Trigonometric Ratios</span>
                                     <i class="bi bi-play-circle"></i>
@@ -278,14 +296,14 @@
 
         <!-- Physics Page -->
         <div id="physics" class="section hidden">
-            <button onclick="showSection('home')" class="text-white mt-8 flex items-center">
+            <button onclick="showSection('home')" class="text-white mt-8 flex items-center" onmouseover="speakText('Back to Home')">
                 <i class="bi bi-arrow-left mr-2"></i> Back to Home
             </button>
             <h1 class="text-3xl text-white font-bold mt-8">Physics</h1>
             <div class="mt-6">
                 <div class="relative">
                     <input type="text" placeholder="Search For Topics" class="w-full p-4 rounded-full bg-indigo-900 text-white focus:outline-none focus:ring-2 focus:ring-purple-400">
-                    <button class="absolute right-4 top-1/2 transform -translate-y-1/2">
+                    <button class="absolute right-4 top-1/2 transform -translate-y-1/2" onmouseover="speakText('Search')">
                         <i class="bi bi-search text-white text-xl"></i>
                     </button>
                 </div>
@@ -299,19 +317,19 @@
                             <span class="text-white opacity-80">0/3 Topics</span>
                         </div>
                         <div class="mt-4 space-y-3">
-                            <a href="https://youtu.be/b1t41Q3xRM8" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                            <a href="https://youtu.be/b1t41Q3xRM8" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all" onmouseover="speakText('Introduction to Motion')">
                                 <div class="flex justify-between items-center">
                                     <span>Introduction to Motion</span>
                                     <i class="bi bi-play-circle"></i>
                                 </div>
                             </a>
-                            <a href="https://youtu.be/fo_pmp5rtzo" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                            <a href="https://youtu.be/fo_pmp5rtzo" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all" onmouseover="speakText('Newton\'s Laws')">
                                 <div class="flex justify-between items-center">
                                     <span>Newton's Laws</span>
                                     <i class="bi bi-play-circle"></i>
                                 </div>
                             </a>
-                            <a href="https://youtu.be/AuRe1E8TUiU" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                            <a href="https://youtu.be/AuRe1E8TUiU" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all" onmouseover="speakText('Work and Energy')">
                                 <div class="flex justify-between items-center">
                                     <span>Work and Energy</span>
                                     <i class="bi bi-play-circle"></i>
@@ -325,13 +343,13 @@
                             <span class="text-white opacity-80">0/3 Topics</span>
                         </div>
                         <div class="mt-4 space-y-3">
-                            <a href="https://youtu.be/w2s_SwKhkKI" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                            <a href="https://youtu.be/w2s_SwKhkKI" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all" onmouseover="speakText('Wave Properties')">
                                 <div class="flex justify-between items-center">
                                     <span>Wave Properties</span>
                                     <i class="bi bi-play-circle"></i>
                                 </div>
                             </a>
-                            <a href="https://youtu.be/qV4lR9EWGlY" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                            <a href="https://youtu.be/qV4lR9EWGlY" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all" onmouseover="speakText('Sound Waves')">
                                 <div class="flex justify-between items-center">
                                     <span>Sound Waves</span>
                                     <i class="bi bi-play-circle"></i>
@@ -345,13 +363,13 @@
                             <span class="text-white opacity-80">0/3 Topics</span>
                         </div>
                         <div class="mt-4 space-y-3">
-                            <a href="https://youtu.be/ru032Mfsfig" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                            <a href="https://youtu.be/ru032Mfsfig" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all" onmouseover="speakText('Electric Charges and Fields')">
                                 <div class="flex justify-between items-center">
                                     <span>Electric Charges and Fields</span>
                                     <i class="bi bi-play-circle"></i>
                                 </div>
                             </a>
-                            <a href="https://youtu.be/s94suB5uLWw" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                            <a href="https://youtu.be/s94suB5uLWw" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all" onmouseover="speakText('Magnetic Fields')">
                                 <div class="flex justify-between items-center">
                                     <span>Magnetic Fields</span>
                                     <i class="bi bi-play-circle"></i>
@@ -365,14 +383,14 @@
 
         <!-- Chemistry Page -->
         <div id="chemistry" class="section hidden">
-            <button onclick="showSection('home')" class="text-white mt-8 flex items-center">
+            <button onclick="showSection('home')" class="text-white mt-8 flex items-center" onmouseover="speakText('Back to Home')">
                 <i class="bi bi-arrow-left mr-2"></i> Back to Home
             </button>
             <h1 class="text-3xl text-white font-bold mt-8">Chemistry</h1>
             <div class="mt-6">
                 <div class="relative">
                     <input type="text" placeholder="Search For Topics" class="w-full p-4 rounded-full bg-indigo-900 text-white focus:outline-none focus:ring-2 focus:ring-purple-400">
-                    <button class="absolute right-4 top-1/2 transform -translate-y-1/2">
+                    <button class="absolute right-4 top-1/2 transform -translate-y-1/2" onmouseover="speakText('Search')">
                         <i class="bi bi-search text-white text-xl"></i>
                     </button>
                 </div>
@@ -386,19 +404,19 @@
                             <span class="text-white opacity-80">0/5 Topics</span>
                         </div>
                         <div class="mt-4 space-y-3">
-                            <a href="https://youtu.be/f5kK5p3v5Yg" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                            <a href="https://youtu.be/f5kK5p3v5Yg" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all" onmouseover="speakText('States of Matter')">
                                 <div class="flex justify-between items-center">
                                     <span>States of Matter</span>
                                     <i class="bi bi-play-circle"></i>
                                 </div>
                             </a>
-                            <a href="https://youtu.be/iZ6Jx4kQh8s" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                            <a href="https://youtu.be/iZ6Jx4kQh8s" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all" onmouseover="speakText('Chemical Kinetics')">
                                 <div class="flex justify-between items-center">
                                     <span>Chemical Kinetics</span>
                                     <i class="bi bi-play-circle"></i>
                                 </div>
                             </a>
-                            <a href="https://youtu.be/HqepqpgZgNk" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                            <a href="https://youtu.be/HqepqpgZgNk" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all" onmouseover="speakText('Thermodynamics')">
                                 <div class="flex justify-between items-center">
                                     <span>Thermodynamics</span>
                                     <i class="bi bi-play-circle"></i>
@@ -412,13 +430,13 @@
                             <span class="text-white opacity-80">0/4 Topics</span>
                         </div>
                         <div class="mt-4 space-y-3">
-                            <a href="https://youtu.be/LQq1IwznQ2o" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                            <a href="https://youtu.be/LQq1IwznQ2o" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all" onmouseover="speakText('Basic Organic Chemistry')">
                                 <div class="flex justify-between items-center">
                                     <span>Basic Organic Chemistry</span>
                                     <i class="bi bi-play-circle"></i>
                                 </div>
                             </a>
-                            <a href="https://youtu.be/bpnHW1KQ7OE" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                            <a href="https://youtu.be/bpnHW1KQ7OE" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all" onmouseover="speakText('Hydrocarbons')">
                                 <div class="flex justify-between items-center">
                                     <span>Hydrocarbons</span>
                                     <i class="bi bi-play-circle"></i>
@@ -432,13 +450,13 @@
                             <span class="text-white opacity-80">0/3 Topics</span>
                         </div>
                         <div class="mt-4 space-y-3">
-                            <a href="https://youtu.be/YeK_vN1rXgk" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                            <a href="https://youtu.be/YeK_vN1rXgk" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all" onmouseover="speakText('Periodic Table')">
                                 <div class="flex justify-between items-center">
                                     <span>Periodic Table</span>
                                     <i class="bi bi-play-circle"></i>
                                 </div>
                             </a>
-                            <a href="https://youtu.be/yl6VIpwJpxs" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                            <a href="https://youtu.be/yl6VIpwJpxs" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all" onmouseover="speakText('Chemical Bonding')">
                                 <div class="flex justify-between items-center">
                                     <span>Chemical Bonding</span>
                                     <i class="bi bi-play-circle"></i>
@@ -452,14 +470,14 @@
 
         <!-- Biology Page -->
         <div id="biology" class="section hidden">
-            <button onclick="showSection('home')" class="text-white mt-8 flex items-center">
+            <button onclick="showSection('home')" class="text-white mt-8 flex items-center" onmouseover="speakText('Back to Home')">
                 <i class="bi bi-arrow-left mr-2"></i> Back to Home
             </button>
             <h1 class="text-3xl text-white font-bold mt-8">Biology</h1>
             <div class="mt-6">
                 <div class="relative">
                     <input type="text" placeholder="Search For Topics" class="w-full p-4 rounded-full bg-indigo-900 text-white focus:outline-none focus:ring-2 focus:ring-purple-400">
-                    <button class="absolute right-4 top-1/2 transform -translate-y-1/2">
+                    <button class="absolute right-4 top-1/2 transform -translate-y-1/2" onmouseover="speakText('Search')">
                         <i class="bi bi-search text-white text-xl"></i>
                     </button>
                 </div>
@@ -473,19 +491,19 @@
                             <span class="text-white opacity-80">0/5 Topics</span>
                         </div>
                         <div class="mt-4 space-y-3">
-                            <a href="https://youtu.be/f5kK5p3v5Yg" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                            <a href="https://youtu.be/f5kK5p3v5Yg" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all" onmouseover="speakText('Cell Structure')">
                                 <div class="flex justify-between items-center">
                                     <span>Cell Structure</span>
                                     <i class="bi bi-play-circle"></i>
                                 </div>
                             </a>
-                            <a href="https://youtu.be/iZ6Jx4kQh8s" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                            <a href="https://youtu.be/iZ6Jx4kQh8s" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all" onmouseover="speakText('Cell Division')">
                                 <div class="flex justify-between items-center">
                                     <span>Cell Division</span>
                                     <i class="bi bi-play-circle"></i>
                                 </div>
                             </a>
-                            <a href="https://youtu.be/HqepqpgZgNk" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                            <a href="https://youtu.be/HqepqpgZgNk" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all" onmouseover="speakText('Genetics')">
                                 <div class="flex justify-between items-center">
                                     <span>Genetics</span>
                                     <i class="bi bi-play-circle"></i>
@@ -499,13 +517,13 @@
                             <span class="text-white opacity-80">0/4 Topics</span>
                         </div>
                         <div class="mt-4 space-y-3">
-                            <a href="https://youtu.be/LQq1IwznQ2o" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                            <a href="https://youtu.be/LQq1IwznQ2o" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all" onmouseover="speakText('Human Anatomy')">
                                 <div class="flex justify-between items-center">
                                     <span>Human Anatomy</span>
                                     <i class="bi bi-play-circle"></i>
                                 </div>
                             </a>
-                            <a href="https://youtu.be/bpnHW1KQ7OE" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                            <a href="https://youtu.be/bpnHW1KQ7OE" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all" onmouseover="speakText('Physiology')">
                                 <div class="flex justify-between items-center">
                                     <span>Physiology</span>
                                     <i class="bi bi-play-circle"></i>
@@ -519,13 +537,13 @@
                             <span class="text-white opacity-80">0/3 Topics</span>
                         </div>
                         <div class="mt-4 space-y-3">
-                            <a href="https://youtu.be/YeK_vN1rXgk" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                            <a href="https://youtu.be/YeK_vN1rXgk" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all" onmouseover="speakText('Ecological Systems')">
                                 <div class="flex justify-between items-center">
                                     <span>Ecological Systems</span>
                                     <i class="bi bi-play-circle"></i>
                                 </div>
                             </a>
-                            <a href="https://youtu.be/yl6VIpwJpxs" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all">
+                            <a href="https://youtu.be/yl6VIpwJpxs" target="_blank" class="block bg-white bg-opacity-10 p-3 rounded-lg text-white hover:bg-opacity-20 transition-all" onmouseover="speakText('Biodiversity')">
                                 <div class="flex justify-between items-center">
                                     <span>Biodiversity</span>
                                     <i class="bi bi-play-circle"></i>
@@ -539,7 +557,7 @@
 
         <!-- Profile Page -->
         <div id="profile" class="section hidden">
-            <button onclick="showSection('home')" class="text-white mt-8 flex items-center">
+            <button onclick="showSection('home')" class="text-white mt-8 flex items-center" onmouseover="speakText('Back to Home')">
                 <i class="bi bi-arrow-left mr-2"></i> Back to Home
             </button>
             <h1 class="text-2xl mb-2 text-white">Profile</h1>
@@ -612,7 +630,7 @@
             </div>
 
             <div class="mt-8 flex justify-center">
-                <button onclick="saveProfile()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded-full">
+                <button onclick="saveProfile()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded-full" onmouseover="speakText('Save Profile')">
                     Save Profile
                 </button>
             </div>
@@ -625,6 +643,21 @@
                 section.classList.add('hidden');
             });
             document.getElementById(sectionId).classList.remove('hidden');
+        }
+
+        function sendMessage() {
+            const chatBox = document.getElementById('chat-box');
+            const chatInput = document.getElementById('chat-input');
+            const message = chatInput.value.trim();
+
+            if (message) {
+                const messageElement = document.createElement('div');
+                messageElement.textContent = message;
+                messageElement.className = 'text-white mb-2';
+                chatBox.appendChild(messageElement);
+                chatInput.value = '';
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }
         }
 
         function saveProfile() {
@@ -673,8 +706,13 @@
             });
         }
 
-        function toggleTextToSpeech() {
-            alert('Text-to-Speech feature is not yet implemented.');
+        function speakText(text) {
+            // Cancel any ongoing speech
+            window.speechSynthesis.cancel();
+
+            // Create a new utterance and speak the text
+            const utterance = new SpeechSynthesisUtterance(text);
+            window.speechSynthesis.speak(utterance);
         }
 
         // Load existing profile data when page loads
